@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/reject"
+        android:titleCondensed="Back"
+        android:color="#fff"
+        android:showAsAction="ifRoom|withText"
+        android:title="Cancel"/>
+    <item 
+        android:id="@+id/accept"
+        android:titleCondensed="Done"
+        android:showAsAction="ifRoom|withText"
+        android:color="#fff"
+        android:title="Done"/>
+</menu>

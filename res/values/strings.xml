@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Planner</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_section1">Items</string>
+    <string name="title_section2">Add New</string>
+    <string name="title_section3">Calendar</string>
+    <string name="Cal_Sync">Sync to phone calendar</string>
+    <string name="Cal_Sync_Sum">This will allow the app to add assignments to your phone\'s native calendar. The assignment will be added as an event on its due date.</string>
+    <string name="Daily_Note">Daily Notification</string>
+    <string name="Daily_Note_Sum">This will enable a daily notification at a set time each day. The notification will give you a summary of all assignments that have not yet been completed.</string>
+	<string name="Urgency_Title">Urgency Period</string>
+	<string name="Urgency_Sum">An assignment will become "urgent" this many days before its due date</string>
+</resources>

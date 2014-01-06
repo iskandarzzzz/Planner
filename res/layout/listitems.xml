@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EBEBEB" >
+
+    <RelativeLayout
+        android:id="@+id/Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/card"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/ClassHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textAllCaps="true"
+            android:textSize="30sp" />
+       
+        <TextView
+            android:id="@+id/TitleHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ClassHeader"
+            android:text="Test"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/DueDateSubheader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TitleHeader"
+            android:text="4:20\t\t\t20/4/20" />
+        <TextView
+            android:id="@+id/nothing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <Button
+		    android:id="@+id/PlayButton"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignParentTop="true"
+		    android:text="PLAY"
+		    android:focusable="false"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EBEBEB" >
+	
+    <Spinner
+        android:id="@+id/Month_Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+    <Spinner
+        android:id="@+id/Year_Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@+id/Month_Spinner"/>
+        
+    
+    <View
+        android:id="@+id/line"
+ 		android:layout_width="match_parent"
+ 		android:layout_height="1dp"
+ 		android:background="@android:color/black"
+ 		android:layout_above="@+id/calendar_grid"/>
+    
+    <TextView 
+        android:id="@+id/sun"
+        android:layout_above="@+id/line"
+        android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_marginLeft="20dp"
+      	android:text="S"/>
+    <TextView 
+        android:id="@+id/mon"
+        android:layout_alignBaseline="@+id/sun"
+        android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_toRightOf="@+id/sun"
+      	android:paddingLeft="45dp"
+      	android:text="M"/>
+    <TextView 
+        android:id="@+id/tue"
+        android:layout_alignBaseline="@+id/sun"
+        android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_toRightOf="@+id/mon"
+      	android:paddingLeft="45dp"
+      	android:text="T"/>
+    <TextView 
+        android:id="@+id/wed"
+        android:layout_alignBaseline="@+id/sun"
+        android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_toRightOf="@+id/tue"
+      	android:paddingLeft="45dp"
+      	android:text="W"/>
+    <TextView 
+        android:id="@+id/thu"
+        android:layout_alignBaseline="@+id/sun"
+        android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_toRightOf="@+id/wed"
+      	android:paddingLeft="45dp"
+      	android:text="T"/>
+    <TextView 
+        android:id="@+id/fri"
+        android:layout_alignBaseline="@+id/sun"
+        android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_toRightOf="@+id/thu"
+      	android:paddingLeft="45dp"
+      	android:text="F"/>
+    <TextView 
+        android:id="@+id/sat"
+        android:layout_alignBaseline="@+id/sun"
+        android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_toRightOf="@+id/fri"
+      	android:paddingLeft="45dp"
+      	android:text="S"/>
+    
+    <GridView
+        android:id="@+id/calendar_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#C7C7C7"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:columnWidth="30dp"
+        android:horizontalSpacing="1dp"
+        android:verticalSpacing="1dp"
+        android:numColumns="7" >
+    </GridView>
+
+
+</RelativeLayout>

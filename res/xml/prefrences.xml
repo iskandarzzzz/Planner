@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android1="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android1:key="calendaradd"
+        android1:title="@string/Cal_Sync"
+        android1:summary="@string/Cal_Sync_Sum"
+        android1:defaultValue="true"/>
+    
+    <CheckBoxPreference
+        android1:key="dailynote"
+       	android1:summary="@string/Daily_Note_Sum"
+        android1:title="@string/Daily_Note"
+		android1:defaultValue="true"/>
+    <ListPreference
+        android1:key="urgency"
+       	android1:summary="@string/Urgency_Sum"
+        android1:title="@string/Urgency_Title"
+        android1:defaultValue="2"
+        android1:entryValues="@array/urgencyValues"
+        android1:entries="@array/urgency"/>
+</PreferenceScreen>

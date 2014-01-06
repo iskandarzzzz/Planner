@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#EBEBEB">
+
+	<ListView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:divider="@null"
+		android:dividerHeight="0dp"
+		android:background="#EBEBEB"
+    	android:layout_marginTop="100dp"
+    	android:id="@+id/lstText"/>
+	
+	<TextView
+	    android:id="@+id/TotalHeader"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:gravity="center_horizontal"
+	    android:layout_alignParentTop="true"
+        android:textColor="#000"
+	    android:layout_toLeftOf="@+id/div"
+	    android:layout_marginTop="14dp"
+	    android:text="TOTAL ASSIGNMENTS" />
+
+	<LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="1dp"
+	    android:layout_height="80dp"
+	    android:background="#C9C9C9"
+	    android:id="@+id/div"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="10dp"
+	    android:layout_centerHorizontal="true" >
+	</LinearLayout>
+	
+	<TextView
+	    android:id="@+id/UrgentHeader"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/TotalHeader"
+	    android:gravity="center_horizontal"
+        android:textColor="#000"
+	    android:layout_toRightOf="@+id/div"
+	    android:layout_alignParentRight="true"
+	    android:text="URGENT ASSIGNMENTS" />
+	
+	<TextView
+	    android:id="@+id/TotalAssignments"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_toLeftOf="@+id/div"
+        android:textColor="#000"
+	    android:layout_alignBottom="@+id/div"
+	    android:textSize="50sp"
+	   	android:gravity="center_horizontal"
+	    android:text="0"
+	    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	<TextView
+	    android:id="@+id/UrgentAssignments"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/TotalAssignments"
+	    android:layout_toRightOf="@+id/div"
+	    android:textSize="50sp"
+	    android:layout_alignParentRight="true"
+	    android:gravity="center_horizontal"
+	    android:text="0"
+	    android:textAppearance="?android:attr/textAppearanceLarge" />
+</RelativeLayout>
