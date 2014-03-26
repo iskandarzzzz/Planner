@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	
+    <item
+        android:id="@+id/itemDelete"
+        android:icon="@drawable/ic_icon_delete"
+        android:orderInCategory="99"
+        android:showAsAction="ifRoom|withText"
+        android:title="DELETE"
+        android:textColor="@color/purple"
+        android:titleCondensed="DEL"/>
+
+</menu>

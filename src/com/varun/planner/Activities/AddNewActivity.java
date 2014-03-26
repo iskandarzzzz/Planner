@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.Bundle;
@@ -39,6 +40,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -76,9 +78,17 @@ public class AddNewActivity extends Activity
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
 		user = (User) ReadFromFile();
 		
+		
+		Typeface Black = Typeface.createFromAsset(getAssets(),
+				"fonts/Roboto-BlackItalic.ttf");
+		
+		TextView header = (TextView) findViewById(R.id.textView1);
+		
+		header.setTypeface(Black);
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_dropdown_item_1line, user.getClassNames());
 		titleEdit = (EditText) findViewById(R.id.TitleEntry);
+		titleEdit.requestFocus();
 		descEdit = (EditText) findViewById(R.id.descEntry);
 		classEdit = (AutoCompleteTextView) findViewById(R.id.classEntry);
 		classEdit.setAdapter(adapter);

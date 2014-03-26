@@ -11,6 +11,7 @@
         android:orderInCategory="99"
         android:showAsAction="ifRoom|withText"
         android:title="ADD"
+        android:textColor="@color/purple"
         android:titleCondensed="ADD"/>
 
 </menu>

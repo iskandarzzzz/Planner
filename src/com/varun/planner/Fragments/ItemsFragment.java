@@ -43,7 +43,7 @@ public class ItemsFragment extends Fragment
 	
 	public ItemsFragment()
 	{
-		
+	 	user= ReadFromFile();
 	}
 
 	@Override
@@ -63,6 +63,8 @@ public class ItemsFragment extends Fragment
 		urgentassignments = 0;
 		user = new User();
 		user = ReadFromFile();
+		
+		
 		
 		if(user!=null)
 		{
@@ -99,54 +101,47 @@ public class ItemsFragment extends Fragment
 		    {
 		    	p=position;
 		    	final Assignment selected = (Assignment) lstTest.getItemAtPosition(position);
+		    	Fragment detail = new DetailViewFragment();
+		    	((DetailViewFragment) detail).setAssignment(selected);
+		    	 getFragmentManager().beginTransaction()
+			        .replace(R.id.fragment_container, detail)
+			        .addToBackStack(null)
+			        .commit();
 		    	
-		    	
-		    	
-		    	String message = selected.getDescription()+"\n\n"+selected.formatCal();
-		    	
-		    	AlertDialog.Builder bldr = new AlertDialog.Builder(getActivity());
-		    	bldr.setTitle(selected.getAssClass()+": "+selected.getTitle());
-		    	bldr
-		    		.setMessage(message)
-		    		.setCancelable(false)
-		    		.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
-						
-						@Override
-						public void onClick(DialogInterface dialog, int which)
-						{
-							try {
-								deleteFromList(selected, rootView);
-							} catch (IOException e) {
-								e.printStackTrace();
-							}
-							dialog.cancel();
-							arrayAdapter.notifyDataSetChanged();
-						}
-					})
-					.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog,int id) {
-							// if this button is clicked, just close
-							// the dialog box and do nothing
-							dialog.cancel();
-						}
-					});
-		    	
-		    	AlertDialog UponSelected = bldr.create();
-		    	UponSelected.show();
 		    }
 		   
 		});
+		Log.i("ITEMS FRAGMENT", "Items Fragment onCreateView");
+		if(getArguments() != null)
+		{
+			Bundle bundle = getArguments();
+			Assignment atodel = (Assignment)bundle.get("del");
+			Log.i("BUNDLE", "BUNDLE != NULL");
+			try
+			{
+				deleteFromList(atodel, rootView);
+                arrayAdapter.notifyDataSetChanged();
+			} catch (IOException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		return rootView;
 	}
-	private void deleteFromList(Assignment atodel, View v) throws IOException
+	
+	
+	void deleteFromList(Assignment atodel, View v) throws IOException
 	{
-		
+		Log.i("DELETED", "ASSIGNMENT DELETED: " + atodel.getTitle());
+		user = ReadFromFile();
 		user.deleteAssignment(atodel);
-		WriteToFile(user);
+		
 		
 		UA = (TextView)v.findViewById(R.id.UrgentAssignments);
 		TA = (TextView)v.findViewById(R.id.TotalAssignments);
-		
+
+        Log.i("USER", "Number of Assignments in User " + user.getNumAssignments());
 		totalassignments = user.getNumAssignments();
 		urgentassignments = user.getUrgents();
 		
@@ -158,7 +153,9 @@ public class ItemsFragment extends Fragment
 		else
 			UA.setTextColor(Color.BLACK);
 		arrayAdapter.remove(atodel);
+		arrayAdapter = new AssignmentsAdapter(getActivity(), R.layout.listitems, user.getAssignments());
 		arrayAdapter.notifyDataSetChanged();
+		WriteToFile(user);
 	}
 	private int getUrgent(ArrayList<Assignment> a)
 	{

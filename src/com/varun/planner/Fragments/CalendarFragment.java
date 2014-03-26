@@ -146,10 +146,8 @@ public class CalendarFragment extends Fragment
 							@Override
 							public void onClick(DialogInterface dialog, int which)
 							{
-								ViewPager viewPager = (ViewPager) getActivity().findViewById(R.id.pager);
-								TabsPagerAdapter mAdapter = new TabsPagerAdapter(getFragmentManager());
-								viewPager.setAdapter(mAdapter);
-								viewPager.setCurrentItem(0);
+								getFragmentManager().beginTransaction()
+						        .replace(R.id.fragment_container, new ItemsFragment()).commit();
 							}
 						})
 						.setNegativeButton("Cancel",new DialogInterface.OnClickListener()

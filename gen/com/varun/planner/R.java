@@ -246,44 +246,46 @@ containing a value of this type.
         public static final int cab_background_bottom_example=0x7f02000b;
         public static final int cab_background_top_example=0x7f02000c;
         public static final int card=0x7f02000d;
-        public static final int ic_launcher=0x7f02000e;
-        public static final int list_focused_example=0x7f02000f;
-        public static final int menu_dropdown_panel_example=0x7f020010;
-        public static final int mic=0x7f020011;
-        public static final int pressed_background_example=0x7f020012;
-        public static final int progress_bg_example=0x7f020013;
-        public static final int progress_horizontal_example=0x7f020014;
-        public static final int progress_primary_example=0x7f020015;
-        public static final int progress_secondary_example=0x7f020016;
-        public static final int selectable_background_example=0x7f020017;
-        public static final int spinner_ab_default_example=0x7f020018;
-        public static final int spinner_ab_disabled_example=0x7f020019;
-        public static final int spinner_ab_focused_example=0x7f02001a;
-        public static final int spinner_ab_pressed_example=0x7f02001b;
-        public static final int spinner_background_ab_example=0x7f02001c;
-        public static final int tab_indicator_ab_example=0x7f02001d;
-        public static final int tab_selected_example=0x7f02001e;
-        public static final int tab_selected_focused_example=0x7f02001f;
-        public static final int tab_selected_pressed_example=0x7f020020;
-        public static final int tab_unselected_example=0x7f020021;
-        public static final int tab_unselected_focused_example=0x7f020022;
-        public static final int tab_unselected_pressed_example=0x7f020023;
+        public static final int ic_icon_delete=0x7f02000e;
+        public static final int ic_launcher=0x7f02000f;
+        public static final int ic_menu_delete=0x7f020010;
+        public static final int list_focused_example=0x7f020011;
+        public static final int menu_dropdown_panel_example=0x7f020012;
+        public static final int mic=0x7f020013;
+        public static final int pressed_background_example=0x7f020014;
+        public static final int progress_bg_example=0x7f020015;
+        public static final int progress_horizontal_example=0x7f020016;
+        public static final int progress_primary_example=0x7f020017;
+        public static final int progress_secondary_example=0x7f020018;
+        public static final int selectable_background_example=0x7f020019;
+        public static final int spinner_ab_default_example=0x7f02001a;
+        public static final int spinner_ab_disabled_example=0x7f02001b;
+        public static final int spinner_ab_focused_example=0x7f02001c;
+        public static final int spinner_ab_pressed_example=0x7f02001d;
+        public static final int spinner_background_ab_example=0x7f02001e;
+        public static final int tab_indicator_ab_example=0x7f02001f;
+        public static final int tab_selected_example=0x7f020020;
+        public static final int tab_selected_focused_example=0x7f020021;
+        public static final int tab_selected_pressed_example=0x7f020022;
+        public static final int tab_unselected_example=0x7f020023;
+        public static final int tab_unselected_focused_example=0x7f020024;
+        public static final int tab_unselected_pressed_example=0x7f020025;
     }
     public static final class id {
-        public static final int Card=0x7f05002e;
-        public static final int ClassHeader=0x7f05002f;
-        public static final int DueDateSubheader=0x7f050031;
+        public static final int Card=0x7f050032;
+        public static final int ClassHeader=0x7f050033;
+        public static final int DueDateSubheader=0x7f050035;
         public static final int Month_Spinner=0x7f05001d;
-        public static final int PlayButton=0x7f050033;
+        public static final int PlayButton=0x7f050037;
         public static final int TitleEntry=0x7f050017;
-        public static final int TitleHeader=0x7f050030;
-        public static final int TotalAssignments=0x7f05002c;
-        public static final int TotalHeader=0x7f050029;
-        public static final int UrgentAssignments=0x7f05002d;
-        public static final int UrgentHeader=0x7f05002b;
+        public static final int TitleHeader=0x7f050034;
+        public static final int TotalAssignments=0x7f050030;
+        public static final int TotalHeader=0x7f05002d;
+        public static final int UrgentAssignments=0x7f050031;
+        public static final int UrgentHeader=0x7f05002f;
         public static final int Year_Spinner=0x7f05001e;
-        public static final int accept=0x7f050035;
-        public static final int action_settings=0x7f050036;
+        public static final int accept=0x7f050039;
+        public static final int action_settings=0x7f05003b;
         public static final int alignBounds=0x7f050002;
         public static final int alignMargins=0x7f050003;
         public static final int bottom=0x7f050005;
@@ -297,28 +299,33 @@ containing a value of this type.
         public static final int datePicker=0x7f05001b;
         public static final int day_of_month=0x7f050013;
         public static final int descEntry=0x7f050018;
-        public static final int div=0x7f05002a;
-        public static final int done=0x7f050038;
+        public static final int description=0x7f05002a;
+        public static final int div=0x7f05002e;
+        public static final int done=0x7f05003d;
+        public static final int duedate=0x7f05002b;
         public static final int end=0x7f050011;
         public static final int fill=0x7f05000d;
         public static final int fill_horizontal=0x7f05000b;
         public static final int fill_vertical=0x7f050009;
+        public static final int fragment_container=0x7f050012;
         public static final int fri=0x7f050026;
         public static final int horizontal=0x7f050000;
-        public static final int itemAdd=0x7f050037;
+        public static final int itemAdd=0x7f05003c;
+        public static final int itemDelete=0x7f05003a;
         public static final int left=0x7f050006;
         public static final int line=0x7f05001f;
-        public static final int lstText=0x7f050028;
+        public static final int lstText=0x7f05002c;
         public static final int mon=0x7f050022;
-        public static final int nothing=0x7f050032;
+        public static final int name=0x7f050029;
+        public static final int nothing=0x7f050036;
         public static final int number_of_assignments=0x7f050014;
-        public static final int pager=0x7f050012;
         public static final int record=0x7f05001a;
-        public static final int reject=0x7f050034;
+        public static final int reject=0x7f050038;
         public static final int right=0x7f050007;
         public static final int sat=0x7f050027;
         public static final int scrollView1=0x7f050015;
         public static final int start=0x7f050010;
+        public static final int subject=0x7f050028;
         public static final int sun=0x7f050021;
         public static final int textView1=0x7f050016;
         public static final int thu=0x7f050025;
@@ -333,14 +340,16 @@ containing a value of this type.
         public static final int calendar_cell=0x7f030001;
         public static final int fragment_addnew_layout=0x7f030002;
         public static final int fragment_calendar_layout=0x7f030003;
-        public static final int fragment_items_layout=0x7f030004;
-        public static final int listitems=0x7f030005;
+        public static final int fragment_detail_view=0x7f030004;
+        public static final int fragment_items_layout=0x7f030005;
+        public static final int listitems=0x7f030006;
     }
     public static final class menu {
         public static final int addnew=0x7f0b0000;
-        public static final int main=0x7f0b0001;
-        public static final int planner=0x7f0b0002;
-        public static final int settings=0x7f0b0003;
+        public static final int detailviewmenu=0x7f0b0001;
+        public static final int main=0x7f0b0002;
+        public static final int planner=0x7f0b0003;
+        public static final int settings=0x7f0b0004;
     }
     public static final class string {
         public static final int Cal_Sync=0x7f090005;
@@ -359,7 +368,7 @@ containing a value of this type.
         public static final int ActionBar_Solid_Example=0x7f0a0002;
         public static final int ActionBar_Transparent_Example=0x7f0a0003;
         public static final int ActionBarTabStyle_Example=0x7f0a0006;
-        public static final int ActionButton_CloseMode_Example=0x7f0a0009;
+        public static final int ActionButton_CloseMode_Example=0x7f0a000a;
         /** 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
@@ -375,12 +384,13 @@ containing a value of this type.
         public static final int AppBaseTheme=0x7f0a0000;
         public static final int DropDownListView_Example=0x7f0a0005;
         public static final int DropDownNav_Example=0x7f0a0007;
+        public static final int MyTheme_ActionBar_TitleTextStyle=0x7f0a0009;
         public static final int PopupMenu_Example=0x7f0a0004;
         public static final int ProgressBar_Example=0x7f0a0008;
         public static final int Theme_Example=0x7f0a0001;
         /**  this style is only referenced in a Light.DarkActionBar based theme 
          */
-        public static final int Theme_Example_Widget=0x7f0a000a;
+        public static final int Theme_Example_Widget=0x7f0a000b;
     }
     public static final class xml {
         public static final int prefrences=0x7f040000;

@@ -1,11 +1,16 @@
 package com.varun.planner.Activities;
 
+import java.util.ArrayList;
+
 import com.varun.planner.R;
+import com.varun.planner.Fragments.CalendarFragment;
+import com.varun.planner.Fragments.ItemsFragment;
 import com.varun.planner.Objects.Assignment;
 import com.varun.planner.Objects.TabsPagerAdapter;
 
 import android.annotation.TargetApi;
 import android.app.ActionBar;
+import android.app.ActionBar.OnNavigationListener;
 import android.app.ActionBar.Tab;
 import android.app.ActionBar.TabListener;
 import android.app.Activity;
@@ -24,13 +29,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
+import android.widget.SpinnerAdapter;
 
-public class MainActivity extends Activity implements TabListener
+public class MainActivity extends Activity implements OnNavigationListener
 {
-	private ViewPager viewPager;
-	private Fragment passed;
 	private ActionBar actionBar;
-	private TabsPagerAdapter mAdapter;
+	private ArrayAdapter<String> mSpinnerAdapter;
+	 
 
 	
 	@Override
@@ -49,44 +55,18 @@ public class MainActivity extends Activity implements TabListener
 		actionBar = getActionBar();
 		actionBar.setDisplayShowTitleEnabled(false);
 		
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		viewPager = (ViewPager) findViewById(R.id.pager);
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+
         actionBar = getActionBar();
-        mAdapter = new TabsPagerAdapter(getFragmentManager());
- 
-        viewPager.setAdapter(mAdapter);
         
-		Tab tab1 = actionBar.newTab();
-		tab1.setText("Assignments");
-		tab1.setTabListener(this);
-		actionBar.addTab(tab1);
-		
-		Tab tab2 = actionBar.newTab();
-		tab2.setText("Calendar");
-		tab2.setTabListener(this);
-		actionBar.addTab(tab2);
+        ArrayList<String> itemList = new ArrayList<String>();
+        itemList.add("Assignments");
+        itemList.add("Calendar");
+        
+        mSpinnerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, itemList);
+        
+        actionBar.setListNavigationCallbacks(mSpinnerAdapter, this);
 
-
-
-		 viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener()
-		 {
-			 
-	            @Override
-	            public void onPageSelected(int position)
-	            {
-	                // on changing the page
-	                // make respected tab selected
-	                actionBar.setSelectedNavigationItem(position);
-	            }
-	 
-	            @Override
-	            public void onPageScrolled(int arg0, float arg1, int arg2) {
-	            }
-	 
-	            @Override
-	            public void onPageScrollStateChanged(int arg0) {
-	            }
-	        });
 	}
 
 	/**
@@ -131,24 +111,20 @@ public class MainActivity extends Activity implements TabListener
 		}
 		return false;
 	}
-
-	@Override
-	public void onTabReselected(Tab arg0, FragmentTransaction arg1)
-	{
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void onTabSelected(Tab tab, FragmentTransaction ft)
-	{
-		Log.i("INFO", "Page " + tab.getPosition()+" Selected");
-		viewPager.setCurrentItem(tab.getPosition());
-	}
-
-	@Override
-	public void onTabUnselected(Tab tab, FragmentTransaction ft)
-	{
-		// TODO Auto-generated method stub
-	}
+	 @Override
+	  public boolean onNavigationItemSelected(int position, long id) {
+	    // When the given dropdown item is selected, show its contents in the
+	    // container view.
+		Fragment fragment;
+		if(position == 0)
+			 fragment = new ItemsFragment();
+		else 
+			fragment = new CalendarFragment();
+	    
+	    
+	    getFragmentManager().beginTransaction()
+	        .replace(R.id.fragment_container, fragment).commit();
+	    return true;
+	  }
 
 }

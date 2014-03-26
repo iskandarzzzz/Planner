@@ -216,4 +216,10 @@ public class Assignment implements Comparable, Serializable
 	{
 		urgency = 86400000*days;
 	}
+
+    @Override
+    public boolean equals(Object a)
+    {
+        return ((Assignment)a).getTitle().equals(getTitle()) && ((Assignment)a).getAssClass().equals(getAssClass()) && ((Assignment)a).getDueDate().equals(getDueDate());
+    }
 }
